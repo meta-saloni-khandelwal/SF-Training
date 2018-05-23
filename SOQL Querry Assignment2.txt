@@ -1,4 +1,4 @@
-﻿										SOQL Assignment
+﻿					SOQL Assignment
 
 
 Query 1- Write SOQL Select all strudent Name,Dob,Sex where LastName starts with “S”
@@ -34,11 +34,10 @@ Query 8- All Classes with Students as sub query where student Name Starts with �
 	SELECT Name, (SELECT First_Name__c, LastName__c FROM Students__r WHERE First_Name__c LIKE 'R%') FROM Class__c
 
 Query 9- All Teachers who have Hindi and English both subjects
-
-		  SELECT Name, Subjects__c FROM Contact WHERE Subjects__c IN ('Science','English')
-		
+	
+	SELECT Name, Subjects__c FROM Contact WHERE Subjects__c IN ('Science','English')
 		
 Query 10- All students who have hindi or maths 
 		
-		SELECT First_Name__c, LastName__c FROM Student__c WHERE (Class__r.Class_Teacher__r.Subject__c = 'Science') 		
+	SELECT First_Name__c, LastName__c FROM Student__c WHERE (Class__r.Class_Teacher__r.Subject__c = 'Science') 		
 		
